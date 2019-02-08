@@ -2,13 +2,15 @@ appId: https://stacksmith.bitnami.com/p/beta-features/apps/29dbc300-0db6-0137-1f
 appVersion: "1.0"
 files:
   userUploads:
-    - app/Caddyfile
-    - app/caddy-control.sh
     - app/index.html
   userScripts:
     build: image/build.sh
+    # TODO: this will be soon unnecessary
     run: image/run.sh
 buildOptions:
   assumeBaseImageFreshness: true
 platforms:
   - target: docker
+baseImages:
+  docker:
+    name: "750858850122.dkr.ecr.us-east-1.amazonaws.com/stacksmith@sha256:527705c0266a6a3e79b3eff03bb736b1f2a8392b21737bbd10dde6a834dd78a6"
