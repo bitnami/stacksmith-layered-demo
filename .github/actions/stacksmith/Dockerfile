@@ -11,7 +11,7 @@ LABEL "com.github.actions.color"="blue"
 LABEL "com.github.actions.name"="Stacksmith Build"
 LABEL "com.github.actions.description"="This is an Action to run stacksmith build."
 
-RUN install_packages jq
+RUN install_packages jq ca-certificates
 
 COPY --from=stacksmith /app/cmd/stacksmith/stacksmith.runfiles/__main__/cmd/stacksmith/linux_amd64_static_pure_stripped/stacksmith /bin/stacksmith
 
