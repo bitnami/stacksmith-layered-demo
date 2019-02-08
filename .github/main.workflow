@@ -1,15 +1,15 @@
 workflow "CI" {
   on = "push"
-  resolves = ["Caddy", "App"]
+  resolves = ["Build Caddy Image", "Build App Image"]
 }
 
-action "Caddy" {
+action "Build Caddy Image" {
   uses = "./.github/actions/stacksmith"
   args = "caddy"
   secrets = ["STACKSMITH_ACCESS_TOKEN"]
 }
 
-action "App" {
+action "Build App Image" {
   uses = "./.github/actions/stacksmith"
   args = "demo-app"
   secrets = ["STACKSMITH_ACCESS_TOKEN"]
