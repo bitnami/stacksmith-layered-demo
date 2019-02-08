@@ -6,4 +6,5 @@ workflow "CI" {
 action "Build" {
   uses = "./.github/actions/stacksmith"
   args = "demo-app"
+  secrets = ["STACKSMITH_ACCESS_TOKEN"]
 }
