@@ -1,4 +1,4 @@
-FROM gcr.io/bitnami-labs/stacksmith:bazel-jenkins-stacksmith2-promoter-master-4304-1ed2e8f976717aad5af08decaad65b6466c67ded as stacksmith
+FROM gcr.io/bitnami-labs/stacksmith:0.6.0 as stacksmith
 
 FROM bitnami/minideb
 
