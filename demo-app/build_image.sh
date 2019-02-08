@@ -10,5 +10,5 @@ cat <<EOF
 =====
 You can run the image with:
 
-  docker run -ti -p 8080:80 ${image}
+  docker run --rm -ti -p 8080:80 ${image}
 EOF
