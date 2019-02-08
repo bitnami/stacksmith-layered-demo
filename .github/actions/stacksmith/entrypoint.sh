@@ -13,10 +13,11 @@ for i in "$@"; do
     image=$(jq -r <image_spec.json '.result|.[]|select(.name=="image")|.value')
     
     cat <<EOF
-    =====
-    You can run the image with:
+=====
+You can run the image with:
     
-      docker run --rm -ti -p 8080:80 ${image}
+  docker run --rm -ti -p 8080:80 ${image}
+
 EOF
   )
 
