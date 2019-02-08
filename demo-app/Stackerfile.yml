@@ -5,8 +5,7 @@ files:
     - app/index.html
   userScripts:
     build: image/build.sh
-    # TODO: this will be soon unnecessary
-    run: image/run.sh
+    run: ../caddy/image/run.sh # TODO: this will be soon unnecessary
 buildOptions:
   assumeBaseImageFreshness: true
 platforms:
